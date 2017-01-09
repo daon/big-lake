@@ -1,0 +1,39 @@
+{
+  "name": "big-lake",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:daon/big-lake.git",
+    "type": "git"
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "test": "mocha \"src/**/*.test.js\" --require babel-register --require test/setup.js",
+    "prestart": "yarn run test",
+    "start": "webpack-dev-server --progress --profile --watch --open",
+    "prebuild": "yarn run test",
+    "build": "webpack --progress --profile --env=PROD",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "postdeploy": "yarn run clean"
+  },
+  "author": "Dan Andersson <dan.andersson@chimpiq.com> (https://chimpiq.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "gh-pages": "^0.12.0",
+    "html-webpack-plugin": "^2.26.0",
+    "mocha": "^3.2.0",
+    "postcss-loader": "^1.2.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "webpack": "2.2.0-rc.3",
+    "webpack-dev-server": "2.2.0-rc.0"
+  }
+}
