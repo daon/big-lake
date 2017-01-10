@@ -7,9 +7,12 @@
 
         <title><%= htmlWebpackPlugin.options.title %></title>
 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
         <link href="<%= htmlWebpackPlugin.files.css %>" rel="stylesheet">
     </head>
     <body>
+        <h1 id="title">100 DAYS</h1>
+        <canvas id="canvas" width="600" height="400"></canvas>
         <script src="<%= htmlWebpackPlugin.files.js %>"></script>
     </body>
 </html>
