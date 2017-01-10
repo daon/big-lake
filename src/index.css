@@ -19,7 +19,37 @@ canvas {
     display: block;
     text-align: center;
     position: absolute;
-    font-size: 15rem;
+    font-size: 5rem;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (min-width: 375px)  {
+    #title {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (min-width: 768px)  {
+    #title {
+        font-size: 11rem;
+    }
+}
+
+@media only screen and (min-width: 1024px)  {
+    #title {
+        font-size: 15rem;
+    }
+}
+
+@media only screen and (min-width: 1440px)  {
+    #title {
+        font-size: 21rem;
+    }
+}
+
+@media only screen and (min-width: 2560px)  {
+    #title {
+        font-size: 37rem;
+    }
 }
